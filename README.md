@@ -1,5 +1,5 @@
-#React代码规范
-##Basic Rules(基本原则)
+# React代码规范
+## Basic Rules(基本原则)
 每个文件中只包含一个React组件。
 
 尽可能地使用JSX语法。
@@ -59,7 +59,7 @@ React组件的属性使用小驼峰命名法
 无障碍属性 aria- 可以正常使用。
 
 ## Component(组件规范)
-###Class 与 React.createClass方法
+### Class 与 React.createClass方法
 尽可能地使用ES6中的类的语法，除非有特殊的对于Mixin的需求。
 
 ```
@@ -78,7 +78,7 @@ class Listing extends React.Component {
 }
 ```
 
-###组件命名
+### 组件命名
 扩展名：使用.jsx作为React组件的扩展名。
 
 文件名：使用帕斯卡命名法命名文件，譬如ReservationCard.jsx。
@@ -98,7 +98,7 @@ const ReservationItem = <ReservationCard />;
 const reservationItem = <ReservationCard />;
 ```
 
-###Declaration(声明)
+### Declaration(声明)
 不要使用displayName来命名组件，而使用引用。
 ```
 // bad
@@ -112,7 +112,7 @@ export default class ReservationCard extends React.Component {
 }
 ```
 
-###Props
+### Props
 对于Props的命名使用camelCase。
 
 ```
@@ -158,8 +158,8 @@ Link.propTypes = propTypes;
 Link.defaultProps = defaultProps;
 ```
 
-##JSX(JSX规范)
-###Alignment(对齐)
+## JSX(JSX规范)
+### Alignment(对齐)
 跟随如下的JSX的语法
 ```
 // bad
@@ -185,7 +185,7 @@ Link.defaultProps = defaultProps;
 
 ```
 
-###Quotes
+### Quotes
 对于JSX的属性用双引号表示，对于其他属性，用单引号表示。
 ```
 // bad
@@ -201,7 +201,7 @@ Link.defaultProps = defaultProps;
 <Foo style={{ left: '20px' }} />
 ```
 
-###Spacing(空格)
+### Spacing(空格)
 在自闭合的标签中仅使用单空格。
 
 ```
@@ -219,7 +219,7 @@ Link.defaultProps = defaultProps;
 <Foo />
 ```
 
-###多段
+### 多段
 当JSX包含多行代码时，将它们包含在小括号中。
 
 ```
@@ -246,8 +246,8 @@ render() {
 }
 ```
 
-##Methods
-###Naming(方法命名)
+## Methods
+### Naming(方法命名)
 对于一个React组件的内部方法，不要使用下划线作为前缀。
 ```
 // bad
@@ -270,7 +270,7 @@ class extends React.Component {
 ```
 
 ## 顺序
-###Ordering for class extends 
+### Ordering for class extends 
 ```
 React.Component:
 optional static methods
@@ -288,7 +288,7 @@ getter methods for render like getSelectReason() or getFooterContent()
 optional render methods like renderNavigation() or renderProfilePicture()
 render
 ```
-###Ordering for React.createClass: eslint: react/sort-comp
+### Ordering for React.createClass: eslint: react/sort-comp
 ```
 displayName
 propTypes
@@ -312,12 +312,12 @@ getter methods for render like getSelectReason() or getFooterContent()
 optional render methods like renderNavigation() or renderProfilePicture()
 render
 ```
-##isMounted
-###不要使用 isMounted. eslint: react/no-is-mounted
+## isMounted
+### 不要使用 isMounted. eslint: react/no-is-mounted
 
 为什么这样做? isMounted是一种反模式，当使用 ES6 类风格声明 React 组件时该属性不可用，并且即将被官方弃用。
 
-#参考
+# 参考
 [airbnb](https://github.com/airbnb/javascript/tree/master/react)
 
 [ES6英文版](https://github.com/airbnb/javascript)
